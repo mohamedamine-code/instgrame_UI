@@ -18,8 +18,9 @@ class _homepageState extends State<homepage> {
     userhome(),
     userSearch(),
     userAdd(),
-    userProfile(),
     userRells(),
+    userProfile(),
+    
   ];
 
   void togglepage(value) {

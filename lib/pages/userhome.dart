@@ -12,14 +12,14 @@ class userhome extends StatefulWidget {
 }
 
 class _userhomeState extends State<userhome> {
-  List<String> people = [
+  List people = [
     //[nom,Image],
-    'bennssir 09',
-    'ahemd',
-    'iheeb',
-    'rania',
-    'taha08',
-    'hamza',
+    ['bennssir 09','assets/img/4dejvp_364e565941c08fb5b137a1312196e022509225fb.jpg'],
+    ['ahemd','assets/img/b4fnn5_64cbcf64bff05ec131db506148f5698c7f5f44e1.jpg'],
+    ['iheeb','assets/img/bzfn7l_355139b23509123f71d72582567b89d415750f35.jpg'],
+    ['rania','assets/img/d4mk0j_a97f811de5568a31395386e56b8993a176f08533.jpg'],
+    ['taha08','assets/img/hbpzaq_5d7ea7d18bd1382c0b21834949cda96062c6c6f9.jpg'],
+    ['hamza','assets/img/lyzpfo_89f4e4fc30121f9ace62bc94df1b208aca28f0f8.jpg']
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,8 @@ class _userhomeState extends State<userhome> {
                 child: Text(
                   'Instgrame',
                   style: TextStyle(
-                    fontSize: 32,
+                    fontFamily: 'font',
+                    fontSize: 40,
                   ),
                 ),
               ),
@@ -75,8 +76,8 @@ class _userhomeState extends State<userhome> {
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
-                      stories(),
-                      Text(people[index]),
+                      stories(pathImage: people[index][1],height: 70.0,width: 70.0,),
+                      Text(people[index][0]),
                     ],
                   );
                 }),
@@ -89,7 +90,7 @@ class _userhomeState extends State<userhome> {
               itemCount: people.length,
               scrollDirection: Axis.vertical,
               itemBuilder: (context, index) {
-            return post(nameUser: people[index],);
+            return post(nameUser: people[index][0],pathImage: people[index][1],pathImage_post: people[index][1],);
           }))
         ],
       ),

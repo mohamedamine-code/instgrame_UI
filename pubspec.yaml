@@ -71,6 +71,14 @@ flutter:
     - assets/send.png
     - assets/share.png
     - assets/user.png
+    - assets/img/4dejvp_364e565941c08fb5b137a1312196e022509225fb.jpg
+    - assets/img/b4fnn5_64cbcf64bff05ec131db506148f5698c7f5f44e1.jpg
+    - assets/img/bzfn7l_355139b23509123f71d72582567b89d415750f35.jpg
+    - assets/img/d4mk0j_a97f811de5568a31395386e56b8993a176f08533.jpg
+    - assets/img/hbpzaq_5d7ea7d18bd1382c0b21834949cda96062c6c6f9.jpg
+    - assets/img/lyzpfo_89f4e4fc30121f9ace62bc94df1b208aca28f0f8.jpg
+    - assets/img/pds5ja_a7a5dd6247a00231fe4bada00fd7b5fad0a950da.jpg
+    - assets/img/wyamjz_14981b4e764d2f9d7fbde35304f79ec495784207.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -83,10 +91,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: font
+      fonts:
+        - asset: assets/font/Cookie-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

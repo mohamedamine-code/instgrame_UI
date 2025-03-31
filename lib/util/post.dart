@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:instagrame_ui/util/stories.dart';
 
 class post extends StatelessWidget {
-  const post({super.key, required this.nameUser});
+  const post({super.key, required this.nameUser, required this.pathImage,required this.pathImage_post});
   final String nameUser;
+  final String pathImage;
+  final String pathImage_post;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,7 @@ class post extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: [stories(), Text(nameUser)],
+                children: [stories(pathImage: pathImage,width: 50.0,height: 50.0,), Text(nameUser),],
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -29,6 +32,7 @@ class post extends StatelessWidget {
         Container(
           height: 330,
           color: Colors.grey,
+          child: Image.asset(pathImage_post,fit: BoxFit.cover,),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
